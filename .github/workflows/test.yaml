@@ -2,7 +2,7 @@ name: Trigger Action to run check update data python script
 
 on:
   schedule:
-    - cron: '*/1 * * * *' # every 10th and 20th of each month
+    - cron: '*/10 * * * *' # every 10th and 20th of each month
   workflow_dispatch:
     
 
@@ -21,6 +21,6 @@ jobs:
 
     - name: Install dependencies
       run: uv sync 
-      
+
     - name: run action test
       run: uv run pyscript.py 
